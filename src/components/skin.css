@@ -1,0 +1,247 @@
+/* Material-UI Inspired VideoJS Skin */
+.vjs-custom-skin.video-js {
+    color: #ffffff;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
+    --mui-primary: #1976d2;
+    --mui-secondary: #9c27b0;
+    --mui-surface: #ffffff;
+    --mui-background: #121212;
+    --mui-text: #ffffff;
+}
+
+/* Control Bar Layout */
+.vjs-custom-skin .vjs-control-bar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(transparent, rgba(18, 18, 18, 0.9));
+    height: 4em;
+    padding: 0 1em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+/* Left side controls container */
+.vjs-custom-skin .vjs-control-bar > div:not(:last-child):not(.vjs-fullscreen-control):not(.vjs-picture-in-picture-control) {
+    display: flex;
+    align-items: center;
+}
+
+/* Right side controls container */
+.vjs-custom-skin .vjs-control-bar > div:last-child {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Right side buttons */
+.vjs-custom-skin .vjs-fullscreen-control,
+.vjs-custom-skin .vjs-picture-in-picture-control {
+    margin-left: 0.5em;
+}
+
+/* Ensure PiP button is visible and positioned */
+.vjs-custom-skin .vjs-picture-in-picture-control {
+    display: flex !important;
+    align-items: center;
+}
+
+.vjs-custom-skin .vjs-picture-in-picture-control.vjs-control.vjs-button {
+    margin-left: auto;
+}
+
+/* Play Button Styling */
+.vjs-custom-skin .vjs-big-play-button {
+    border: none;
+    background-color: var(--mui-primary);
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    margin-left: -2em;
+    margin-top: -2em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.vjs-custom-skin .vjs-big-play-button:hover {
+    background-color: #1565c0;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.vjs-custom-skin .vjs-big-play-button .vjs-icon-play:before {
+    font-size: 2.5em;
+    line-height: 1.5em;
+}
+
+/* Progress Bar Styling */
+.vjs-custom-skin .vjs-progress-control {
+    position: absolute;
+    bottom: 100%;
+    width: 100% !important;
+    height: 0.5em;
+    left: 0;
+    right: 0;
+}
+
+.vjs-custom-skin .vjs-progress-holder {
+    height: 0.5em;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 0.25em;
+    width: 100%;
+}
+
+.vjs-custom-skin .vjs-play-progress {
+    background: var(--mui-primary);
+    border-radius: 0.25em;
+}
+
+.vjs-custom-skin .vjs-progress-holder .vjs-play-progress:before {
+    display: none;
+}
+
+/* Volume Control Styling */
+ .vjs-custom-skin .vjs-volume-panel {
+    margin-right: 1em;
+}
+
+.vjs-custom-skin .vjs-volume-control {
+    width: 5em;
+}
+
+.vjs-custom-skin .vjs-volume-level {
+    background: var(--mui-primary);
+    border-radius: 0.25em;
+}
+
+.vjs-custom-skin .vjs-volume-bar {
+    height: 0.5em;
+    margin-top: 0.25em;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 0.25em;
+}
+
+.vjs-custom-skin .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal:active {
+    background-color: transparent;
+}
+
+/* Control Buttons Styling */
+.vjs-custom-skin .vjs-control {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+}
+
+/* Hover effect only for play, PiP, and fullscreen buttons */
+.vjs-custom-skin .vjs-big-play-button:hover,
+.vjs-custom-skin .vjs-picture-in-picture-control:hover,
+.vjs-custom-skin .vjs-fullscreen-control:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    text-shadow: none;
+}
+
+/* Remove hover effect from other controls */
+.vjs-custom-skin .vjs-control:not(.vjs-big-play-button):not(.vjs-picture-in-picture-control):not(.vjs-fullscreen-control):hover {
+    background-color: transparent;
+    text-shadow: none;
+}
+
+/* Time Display Styling */
+.vjs-custom-skin .vjs-time-control {
+    padding: 0 0.5em;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+/* Fullscreen Button Styling */
+.vjs-custom-skin .vjs-fullscreen-control {
+    margin-left: 0.5em;
+}
+
+/* Loading Spinner */
+.vjs-custom-skin .vjs-loading-spinner {
+    border: 3px solid rgba(255, 255, 255, 0.12);
+    border-top-color: var(--mui-primary);
+    border-radius: 50%;
+}
+
+/* Slider Styling */
+.vjs-custom-skin .vjs-slider {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 0.25em;
+}
+
+.vjs-custom-skin .vjs-slider-bar {
+    background: var(--mui-primary);
+    border-radius: 0.25em;
+    margin: auto;
+}
+
+/* Menu Styling */
+.vjs-custom-skin .vjs-menu {
+    background: var(--mui-background);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.vjs-custom-skin .vjs-menu li {
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vjs-custom-skin .vjs-menu li:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* MUI-like Button States */
+.vjs-custom-skin .vjs-button {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vjs-custom-skin .vjs-button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.vjs-custom-skin .vjs-button:active {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* MUI-like Focus States */
+.vjs-custom-skin .vjs-control:focus,
+.vjs-custom-skin .vjs-button:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* MUI-like Ripple Effect */
+.vjs-custom-skin .vjs-control::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+
+.vjs-custom-skin .vjs-control:active::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* Remove the hover state for control bar */
+.vjs-custom-skin .vjs-control-bar {
+    opacity: 1;
+}
+
+.vjs-custom-skin:hover .vjs-control-bar {
+    opacity: 1;
+}

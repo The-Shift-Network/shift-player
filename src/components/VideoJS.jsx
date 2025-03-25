@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
+
 import 'video.js/dist/video-js.css';
+import './skin.css';
 
 export const VideoJS = ({ options, onReady }) => {
   const videoRef = useRef(null);
@@ -21,13 +23,18 @@ export const VideoJS = ({ options, onReady }) => {
         onReady && onReady(player);
       });
 
+      player.addClass('vjs-custom-skin');
+
       // You could update an existing player in the `else` block here
       // on prop change, for example:
     } else {
+
       const player = playerRef.current;
 
       player.autoplay(options.autoplay);
       player.src(options.sources);
+
+      player.addClass('vjs-custom-skin');
     }
   }, [options, videoRef]);
 
