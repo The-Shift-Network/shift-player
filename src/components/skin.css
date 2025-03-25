@@ -122,7 +122,11 @@
 }
 
 .vjs-custom-skin .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal:active {
-    background-color: transparent;
+    background-color: linear-gradient(transparent, rgba(18, 18, 18, 0.9));
+}
+
+.vjs-custom-skin .vjs-control::after {
+    background: transparent !important;
 }
 
 /* Control Buttons Styling */
@@ -154,6 +158,11 @@
     padding: 0 0.5em;
     font-size: 0.875rem;
     font-weight: 400;
+}
+
+/* Hide remaining time */
+.vjs-custom-skin .vjs-remaining-time.vjs-time-control.vjs-control {
+    display: none !important;
 }
 
 /* Fullscreen Button Styling */
@@ -215,7 +224,7 @@
 .vjs-custom-skin .vjs-control:focus,
 .vjs-custom-skin .vjs-button:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: transparent;
 }
 
 /* MUI-like Ripple Effect */
