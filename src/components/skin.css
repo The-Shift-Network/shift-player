@@ -188,6 +188,11 @@
     margin: auto;
 }
 
+.vjs-custom-skin .vjs-play-progress.vjs-slider-bar {
+    background: var(--mui-primary) !important;
+}
+
+
 /* Volume Level Styling */
 .vjs-custom-skin .vjs-volume-level {
     background-color: var(--mui-primary);
