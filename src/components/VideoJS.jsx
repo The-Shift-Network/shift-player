@@ -9,7 +9,6 @@ export const VideoJS = ({ options, onReady }) => {
   const playerRef = useRef(null);
 
   useEffect(() => {
-
     // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode.
@@ -18,7 +17,29 @@ export const VideoJS = ({ options, onReady }) => {
       videoElement.classList.add('vjs-big-play-centered');
       videoRef.current.appendChild(videoElement);
 
-      const player = playerRef.current = videojs(videoElement, options, () => {
+      const currentOptions = {
+        controlBar: {
+          children: [
+            'skipBackward',
+            'playToggle',
+            'skipForward',
+            'volumePanel',
+            'currentTimeDisplay',
+            'timeDivider',
+            'durationDisplay',
+            'progressControl',
+            'pictureInPictureToggle',
+            'fullscreenToggle',
+          ],
+          skipButtons: {
+            forward: 5,
+            backward: 5,
+          }
+        },
+        ...options
+      };
+
+      const player = playerRef.current = videojs(videoElement, currentOptions, () => {
         videojs.log('player is ready');
         onReady && onReady(player);
       });
