@@ -1,4 +1,3 @@
-/* Material-UI Inspired VideoJS Skin */
 .vjs-custom-skin.video-js {
     color: #ffffff;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -54,11 +53,11 @@
     border: none;
     background-color: var(--mui-primary);
     border-radius: 50%;
-    width: 4em;
-    height: 4em;
-    line-height: 4em;
-    margin-left: -2em;
-    margin-top: -2em;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -70,7 +69,7 @@
 }
 
 .vjs-custom-skin .vjs-big-play-button .vjs-icon-play:before {
-    font-size: 2.5em;
+    font-size: 1.5em;
     line-height: 1.5em;
 }
 
@@ -184,9 +183,23 @@
 }
 
 .vjs-custom-skin .vjs-slider-bar {
-    background: var(--mui-primary);
+    background: gray;
     border-radius: 0.25em;
     margin: auto;
+}
+
+/* Volume Level Styling */
+.vjs-custom-skin .vjs-volume-level {
+    background-color: var(--mui-primary);
+}
+
+.vjs-custom-skin .vjs-slider-horizontal .vjs-volume-level {
+    height: 0.5em;
+}
+
+.vjs-custom-skin .vjs-slider-horizontal .vjs-volume-level:before {
+    line-height: 0.5em;
+    font-size: 1em;
 }
 
 /* Menu Styling */
