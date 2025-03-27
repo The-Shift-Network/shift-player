@@ -1,0 +1,31 @@
+/* Theater mode styles */
+.vjs-theater-mode {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vjs-theater-mode .video-js {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.vjs-theater-mode-button {
+  cursor: pointer;
+}
+
+.vjs-theater-mode-button:before {
+  content: "\f101";
+  font-family: VideoJS;
+  font-size: 1.8em;
+  line-height: 2;
+} 

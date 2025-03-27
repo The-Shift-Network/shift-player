@@ -3,6 +3,7 @@ import videojs from 'video.js';
 
 import 'video.js/dist/video-js.css';
 import './skin.css';
+import './theater-mode.css';
 
 export const VideoJS = ({ options, onReady }) => {
   const videoRef = useRef(null);
@@ -29,6 +30,7 @@ export const VideoJS = ({ options, onReady }) => {
             'durationDisplay',
             'progressControl',
             'pictureInPictureToggle',
+            'theaterModeToggle',
             'fullscreenToggle',
           ],
           skipButtons: {
@@ -46,10 +48,20 @@ export const VideoJS = ({ options, onReady }) => {
 
       player.addClass('vjs-custom-skin');
 
+      // Add theater mode functionality
+      const theaterModeButton = player.controlBar.addChild('Button', {
+        text: 'Theater Mode',
+        className: 'vjs-theater-mode-button vjs-button',
+      });
+
+      theaterModeButton.on('click', () => {
+        const container = player.el().parentElement;
+        container.classList.toggle('vjs-theater-mode');
+      });
+
       // You could update an existing player in the `else` block here
       // on prop change, for example:
     } else {
-
       const player = playerRef.current;
 
       player.autoplay(options.autoplay);
